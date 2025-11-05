@@ -55,8 +55,18 @@
                 arrDevicesName[Clientdevices] = NameDevice;
                 arrkWhperdaydevices[Clientdevices] = DevicekWhPerDay;
             }
-            CalculationTotalPerDay(arrkWhperdaydevices);
-            Calculationavg(arrkWhperdaydevices);
+            //Berekeingen en processen
+            double TotalkWh = CalculationTotalPerDay(arrkWhperdaydevices);
+            double avgkWh = Calculationavg(arrkWhperdaydevices);
+            string AnalayseVerbruik = "Empty";
+            if (avgkWh < 5)
+                AnalayseVerbruik = "Laag verbruik";
+            else if (avgkWh > 15)
+                AnalayseVerbruik = "Hoog verbruik";
+            else
+                AnalayseVerbruik = "Normaal verbruik";
+            //resultaat tonen
+            Console.WriteLine($"Gebruiker: {nameclient}\nAantal Toestelen: {clientdevices}/nTotaal verbuik: {TotalkWh} kWh\nGemiddelde verbuik per toestel: {avgkWh} kWh\nAnalyse: {AnalayseVerbruik}");
             // voorkomen derket afsluiten
             Console.ReadKey();
         }
