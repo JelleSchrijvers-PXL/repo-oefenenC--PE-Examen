@@ -57,8 +57,8 @@
                 arrkWhperdaydevices[Clientdevices] = DevicekWhPerDay;
             }
             //Berekeingen en processen
-            double TotalkWh = CalculationTotalPerDay(arrkWhperdaydevices);
-            double avgkWh = Calculationavg(arrkWhperdaydevices);
+            double TotalkWh = Math.Round(CalculationTotalPerDay(arrkWhperdaydevices),1);
+            double avgkWh = Math.Round( Calculationavg(arrkWhperdaydevices),1);
             string AnalayseVerbruik = "Empty";
             if (avgkWh < 5)
                 AnalayseVerbruik = "Laag verbruik";
