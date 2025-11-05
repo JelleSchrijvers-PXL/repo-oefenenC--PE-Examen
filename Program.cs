@@ -33,8 +33,6 @@
             double DevicekWhPerDay;
             double[] arrkWhperdaydevices ;
             string[] arrDevicesName;
-            arrkWhperdaydevices = new double[] {};
-            arrDevicesName = new string[] {};
             //declaratie
             Console.Write("Hello, customer!!!\n What is your name : ");
             nameclient = Console.ReadLine();
@@ -42,8 +40,11 @@
             {
                 Console.Write("How many devices, do you have : ");
             }while(!int.TryParse(Console.ReadLine(), out clientdevices));
+            // arrays maken
+            arrkWhperdaydevices = new double[clientdevices];
+            arrDevicesName = new string[clientdevices];
             //loop
-            for(int Clientdevices = 0; Clientdevices != clientdevices;Clientdevices++)
+            for (int Clientdevices = 0; Clientdevices != clientdevices;Clientdevices++)
             {
                 string NameDevice;
                 Console.Write($"what is the name of your {Clientdevices+1} device: ");
