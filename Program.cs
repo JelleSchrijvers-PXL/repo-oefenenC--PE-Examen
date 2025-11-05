@@ -11,22 +11,22 @@
             string[] arrDevicesName= {};
 
             //declaratie
-            Console.Write("Hello, customer!!! \n What is your name :");
+            Console.Write("Hello, customer!!! \n What is your name : ");
             nameclient = Console.ReadLine();
             do
             {
-                Console.WriteLine("How many devices, do you have :");
+                Console.Write("How many devices, do you have : ");
             }while(!int.TryParse(Console.ReadLine(), out clientdevices));
-
-            for(int Clientdevices = 0; Clientdevices >= clientdevices;Clientdevices++)
+            //loop
+            for(int Clientdevices = 0; Clientdevices != clientdevices;Clientdevices++)
             {
                 string NameDevice;
-                Console.Write($"what is the name of your {Clientdevices+1} device:");
+                Console.Write($"what is the name of your {Clientdevices+1} device: ");
                 NameDevice = Console.ReadLine();
                 do
                 {
-                    Console.Write("How much kWh per day, does your device use:");
-                }while(Double.TryParse(Console.ReadLine(), out double DevicekWhPerDay));
+                    Console.Write("How much kWh per day, does your device use: ");
+                }while(!Double.TryParse(Console.ReadLine(), out double DevicekWhPerDay));
 
             }
             // voorkomen derket afsluiten
