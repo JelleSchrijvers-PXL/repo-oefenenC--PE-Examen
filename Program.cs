@@ -67,7 +67,7 @@
             else
                 AnalayseVerbruik = "Normaal verbruik";
             //resultaat tonen
-            Console.WriteLine($"Gebruiker: {nameclient}\nAantal Toestelen: {clientdevices}/nTotaal verbuik: {TotalkWh} kWh\nGemiddelde verbuik per toestel: {avgkWh} kWh\nAnalyse: {AnalayseVerbruik}");
+            Console.WriteLine($"Gebruiker: {nameclient}\nAantal Toestelen: {clientdevices}\nTotaal verbuik: {TotalkWh} kWh\nGemiddelde verbuik per toestel: {avgkWh} kWh\nAnalyse: {AnalayseVerbruik}");
             // voorkomen derket afsluiten
             Console.ReadKey();
         }
